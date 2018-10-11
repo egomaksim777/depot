@@ -27,9 +27,6 @@ header.main {
   }
   background: white;
   margin: 0;
-  img {
-    height: 7em;
-  }
   h1 {
     display: none;
   }
@@ -56,6 +53,7 @@ header.main {
     @media (min-width: 30em) {
       text-align: left; // desktop nav is left-aligned
       padding: 1em;     // and needs more padding
+    border-right: solid 0.250em;
     }
     ul {
       list-style: none;
@@ -66,9 +64,9 @@ header.main {
       }
       li {
         margin: 0;
-        padding: 1em;
+        padding: 0.5em;
         text-transform: uppercase;
-        letter-spacing: 0.354em;
+        letter-spacing: 0.100em;
         a {
           color:  gray;
           text-decoration: blink;

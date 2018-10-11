@@ -13,16 +13,19 @@
 
   <body>
     <header class="main">
-      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
       <h1><%= @page_title %></h1>
     </header>
     <section class="content">
       <nav class="side_nav">
         <ul>
+          <li><%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %></li>
           <li><a <%= link_to 'Home', '/' %></a></li>
           <li><a href="#">Questions</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Contact</a></li>
+          <br/>
+          <li><%= Time.now.strftime("Date: %d-%m-%Y") %></li>
+          <li><%= Time.now.strftime("Time: %H:%M") %></li>
         </ul>
       </nav>
       <main class='<%= controller.controller_name %>'>
