@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Books Online Store</title>
+    <title>The Bookshelf</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all',
@@ -18,14 +18,14 @@
     <section class="content">
       <nav class="side_nav">
         <ul>
-          <li><%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %></li>
+          <li><%= image_tag 'logo.svg', alt: 'The Bookshelf' %></li>
           <li><a <%= link_to 'Home', '/' %></a></li>
           <li><a href="#">Questions</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Contact</a></li>
           <br/>
-          <li><%= Time.now.strftime("Date: %d-%m-%Y") %></li>
-          <li><%= Time.now.strftime("Time: %H:%M") %></li>
+          <li><%= Time.now.strftime("Date:%d/%m/%Y") %></li>
+          <li><%= Time.now.strftime("Time:%H:%M") %></li>
         </ul>
       </nav>
       <main class='<%= controller.controller_name %>'>

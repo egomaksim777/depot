@@ -39,6 +39,22 @@
         background: none;
         color: black;
       }
+      form, div {
+        display: inline;
+      }
+      input[type="submit"] {
+        background-color: white;
+        border-radius: 0.354em;
+        border: solid thin black;
+        color: black;
+        font-size: 1em;
+        padding: 0.354em 1em;
+      }
+      input[type="submit"]:hover {
+        background-color: gray;
+        color: white;
+        border: solid thin gray;
+      }
     }
   }
 }
