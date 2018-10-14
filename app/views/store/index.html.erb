@@ -23,8 +23,8 @@
     <% end %>
   <% end %>
 </ul>
-<% if @session >= 5 %>
+<% if @visits_counter >= 5 %>
   <p>
-    <b><em><%= 'This page has been visited ' + pluralize(@session, 'time') + '.' %><em></b>
+    <b><em><%= 'This page has been visited ' + pluralize(@visits_counter, 'time') + '.' %><em></b>
   </p>
 <% end %>

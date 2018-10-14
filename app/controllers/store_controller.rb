@@ -3,6 +3,6 @@ class StoreController < ApplicationController
 
   def index
     @products = Product.order(:title)
-    @session = visits_counter
+    @visits_counter = visits_counter
   end
 end
