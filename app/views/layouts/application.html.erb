@@ -27,6 +27,11 @@
           <li><%= Time.now.strftime("Date:%d/%m/%Y") %></li>
           <li><%= Time.now.strftime("Time:%H:%M") %></li>
         </ul>
+        <% if @cart %>
+          <div id="cart" class="carts">
+            <%= render @cart %>
+          </div>
+        <% end %>
       </nav>
       <main class='<%= controller.controller_name %>'>
         <%= yield %>

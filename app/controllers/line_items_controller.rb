@@ -33,7 +33,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @line_item }
         set_session_counter_to_nil
       else
@@ -62,23 +62,24 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to "#{carts_path}/#{session[:cart_id]}", notice: 'The Book was successfully removed from the Cart.' }
+      format.html { redirect_to store_index_url, notice: 'The Book was successfully removed from the Cart.' }
       format.json { head :no_content }
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_line_item
-      @line_item = LineItem.find(params[:id])
-    end
+private
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_line_item
+    @line_item = LineItem.find(params[:id])
+  end
 
-    def set_session_counter_to_nil
-      session[:counter] = nil
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def line_item_params
+    params.require(:line_item).permit(:product_id, :cart_id)
+  end
+
+  def set_session_counter_to_nil
+    session[:counter] = nil
+  end
 end

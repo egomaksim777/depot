@@ -65,7 +65,22 @@ header.main {
       padding: 1em;     // and needs more padding
     border-right: solid 0.250em;
     }
-    ul {
+    #cart {
+      border-top: solid 0.250em;
+      article {
+        h2 {
+          margin-top: 0;
+        }
+        background: white;
+        border-radius: 0.5em;
+        margin: 1em;
+        padding: 1.414em;
+        @media (min-width: 30em) {
+          margin: 0; // desktop doesn't need this margin
+        }
+      }
+    }
+      ul {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -77,6 +92,9 @@ header.main {
         padding: 0.5em;
         text-transform: uppercase;
         letter-spacing: 0.100em;
+        img {
+          width: 7em;
+        }
         a {
           color:  gray;
           text-decoration: blink;
