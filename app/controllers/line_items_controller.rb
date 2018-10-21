@@ -34,6 +34,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to store_index_url }
+        format.js
         format.json { render :show, status: :created, location: @line_item }
         set_session_counter_to_nil
       else
@@ -63,6 +64,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to store_index_url, notice: 'The Book was successfully removed from the Cart.' }
+      format.js
       format.json { head :no_content }
     end
   end

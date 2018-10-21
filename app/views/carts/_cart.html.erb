@@ -5,7 +5,7 @@
   <article>
     <h2>Your Cart</h2>
     <table>
-      <%= render(cart.line_items) %>
+      <%= render(cart.line_items.sort) %>
       <tfoot>
         <tr>
           <th colspan="2">Total:</th>
