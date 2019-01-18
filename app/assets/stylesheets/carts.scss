@@ -60,4 +60,19 @@
     background-color: red;
     font-weight: bold;
   }
+  input[value="Checkout"] {
+    background-color: white;
+    border-radius: 0.354em;
+    border: solid thin black;
+    color: black;
+    font-size: 1em;
+    width: 8em;
+    padding: 0.354em 1em;
+  }
+  input[value="Checkout"]:hover {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: solid thin green;
+  }
 }

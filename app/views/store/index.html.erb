@@ -23,7 +23,7 @@
     <% end %>
   <% end %>
 </ul>
-<% if @visits_counter >= 5 %>
+<% if !@visits_counter.nil? && @visits_counter >= 5 %>
   <p>
     <b><em><%= 'This page has been visited ' + pluralize(@visits_counter, 'time') + '.' %><em></b>
   </p>
