@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'bundler', '>= 2.0.1'
 gem "loofah", ">= 2.2.3"
+gem 'webpacker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 gem "rack", ">= 2.0.6"
